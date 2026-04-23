@@ -37,14 +37,14 @@ void loop()
     delay(1000); // Delay for 1 second before next check
 
     Serial.println("Running Gripper");
-    moveGripper(90); // Move Gripper to 90 degrees
+    Gripping(90); // Move Gripper to 90 degrees
     delay(1000); // Delay for 1 second before next action
-    moveGripper(0);  // Move Gripper back to 0 degrees
+    Gripping(0);  // Move Gripper back to 0 degrees
     delay(1000); // Delay for 1 second before next check
 
     Serial.println("Running Rotation");
-    rotateBot(90); // Rotate Bot to 90 degrees
+    rotateArm(90); // Rotate Arm to 90 degrees
     delay(1000); // Delay for 1 second before next action
-    rotateBot(0);  // Rotate Bot back to 0 degrees
+    rotateArm(0);  // Rotate Arm back to 0 degrees
     delay(1000); // Delay for 1 second before next check
 }
