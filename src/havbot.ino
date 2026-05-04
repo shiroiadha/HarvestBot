@@ -26,6 +26,7 @@ void loop()
     bool objectDetected = detectObject(); // Update the detection result
 
     if (objectDetected) { // Check if an object is detected
+        runMotor(0, 1);     // Stop motor
         // Sample actions when an object is detected
         moveArm(0, 90);     // Move Arm 1 to 90 degrees
         moveArm(1, 90);     // Move Arm 2 to 90 degrees
@@ -41,7 +42,6 @@ void loop()
     } else {
         // If no object is detected, you can add idle behavior here
         runMotor(255, 1);   // Move forward at full speed
-        runMotor(0, 1);     // Stop motor
     }
     delay(500); // Delay for a while before the next detection
 }
